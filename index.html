@@ -502,21 +502,60 @@
 
         /* --- Responsividade --- */
         @media (max-width: 992px) {
-             .logo-text {
-                display: none;
-            }
+            /* Regra que escondia o texto da logo foi removida */
         }
         
         @media (max-width: 768px) {
-            .header .container {
-                justify-content: space-between;
+            .header {
+                position: relative; /* Necessário para o menu dropdown */
             }
+
+            .logo-text {
+                font-size: 1rem; /* Tamanho ajustado para mobile */
+                letter-spacing: 0;
+            }
+            .logo img {
+                max-height: 50px; /* Logo menor para mobile */
+            }
+
             .nav-menu {
-                display: none;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--white);
+                position: absolute;
+                top: 100%; /* Posiciona logo abaixo do header */
+                left: 0;
+                width: 100%;
+                box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+                max-height: 0; /* Inicia escondido */
+                overflow: hidden;
+                transition: max-height 0.4s ease-in-out;
             }
+            .nav-menu.active {
+                max-height: 300px; /* Altura para mostrar os itens */
+            }
+            .nav-menu ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+            .nav-menu ul li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid var(--light-gray);
+            }
+            .nav-menu ul li:last-child {
+                border-bottom: none;
+            }
+            .nav-menu ul li a {
+                display: block;
+                padding: 1rem;
+            }
+
             .menu-toggle {
                 display: block;
             }
+
             .hero h1 {
                 font-size: 2.2rem;
             }
@@ -531,6 +570,17 @@
             }
             .map-container {
                 margin-top: 20px;
+            }
+            
+            .contact-info-direct p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-info-direct .btn {
+                margin-bottom: 15px !important; /* Adiciona espaço vertical */
+                margin-right: 0 !important; /* Remove margem lateral */
+                width: 90%;
             }
         }
 
@@ -692,7 +742,7 @@
                 <div class="contact-info-direct">
                     <h3>Prefere ligar ou enviar uma mensagem direta?</h3>
                     <p>
-                        <a href="tel:+5511932092465" class="btn btn-secondary" style="margin-right: 10px;">
+                        <a href="tel:+5511932092465" class="btn btn-secondary">
                             <i class="fas fa-phone-alt"></i> Ligar Agora
                         </a>
                         <a href="https://wa.me/5511932092465?text=Vim%20pelo%20site!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-primary">
@@ -778,6 +828,28 @@
 
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
+        });
+        
+        // Lógica do Menu Mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (menuToggle && navMenu) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+
+                // Fecha o menu ao clicar em um link
+                const navLinks = navMenu.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                        }
+                    });
+                });
+            }
         });
 
     </script>
