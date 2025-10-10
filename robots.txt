@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.assistenciatecnicavitoria.com.br/sitemap.xml
