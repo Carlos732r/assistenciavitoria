@@ -3,66 +3,993 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Temporariamente Indisponível</title>
+    
+    <title>Assistência Técnica Vitória - Conserto de Geladeiras, Freezers e Eletrodomésticos em São Paulo e Guarulhos</title>
+    <meta name="description" content="Assistência Técnica Vitória especializada em conserto e manutenção de geladeiras, freezers, máquinas de lavar, expositoras, câmaras frigoríficas e cervejeiras em São Paulo e Guarulhos. Atendimento especializado com garantia!">
+    <meta name="keywords" content="conserto geladeira São Paulo, manutenção geladeira Guarulhos, reparo freezer, conserto máquina de lavar, assistência técnica geladeira, conserto câmara frigorífica, reparo expositora, conserto cervejeira, manutenção eletrodomésticos São Paulo, técnico geladeira Guarulhos, conserto geladeira Brastemp, conserto geladeira Consul, conserto geladeira Electrolux, manutenção freezer industrial, reparo expositora comercial">
+    <meta name="author" content="Assistência Técnica Vitória">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="São Paulo">
+    <meta name="geo.position" content="-23.5505;-46.6333">
+
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Assistência Técnica Vitória - Conserto de Geladeiras e Eletrodomésticos">
+    <meta property="og:description" content="Especialistas em conserto de geladeiras, freezers, máquinas de lavar e refrigeração comercial em São Paulo e Guarulhos">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Schema.org para SEO local -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+    "name": "Assistência Técnica Vitória",
+      "image": "logo.png",
+      "description": "Assistência técnica especializada em consertos de geladeiras, freezers, máquinas de lavar, expositoras, câmaras frigoríficas e cervejeiras",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Alameda Cleveland, 123",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01218-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "telephone": "+55-11-91502-2618",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        },
+        {
+          "@type": "City",
+          "name": "Guarulhos"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Refrigeração",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conserto de Geladeiras",
+              "description": "Manutenção e reparo de geladeiras de todas as marcas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conserto de Freezers",
+              "description": "Reparo e manutenção de freezers residenciais e comerciais"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conserto de Máquinas de Lavar",
+              "description": "Manutenção completa de máquinas de lavar roupas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Manutenção de Câmaras Frigoríficas",
+              "description": "Reparo e manutenção de câmaras frias comerciais"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
-        body {
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        :root {
+            --primary-color: #0d47a1;
+            --secondary-color: #e3f2fd;
+            --accent-color: #ff6f00;
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --white: #ffffff;
+            --success-color: #25D366;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f5f6fa;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-            text-align: center;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
         }
 
         .container {
-            background: #fff;
-            padding: 40px 50px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-            max-width: 420px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
         }
 
-        h1 {
+        /* --- Header --- */
+        .header {
+            background: var(--white);
+            padding: 0.5rem 0; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            display: flex; 
+            align-items: center; 
+            gap: 18px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            max-height: 90px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 2.1rem; 
+            font-weight: 700; 
+            color: #0d47a1; 
+            font-family: 'Roboto', sans-serif; 
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            margin-left: auto; 
+        }
+        
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-menu ul li {
+            margin-left: 25px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+        
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('5.jpg') no-repeat center top/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-phone {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 2rem;
+            border: 1px solid var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .hero-phone:hover {
+            background-color: rgba(255, 111, 0, 0.3);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--success-color);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .hero .btn-destaque {
+            padding: 15px 35px;
+            font-size: 1.15rem;
+            border-radius: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        /* --- Seções Padrão --- */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        #sobre {
+            background: var(--secondary-color);
+        }
+        
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .about-content p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .about-content strong {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* --- Serviços --- */
+        .services-banner {
+            width: 100%;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .services-banner img {
+            width: 100%;
+            display: block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .service-card ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .service-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        /* --- Benefícios --- */
+        #beneficios {
+            background-color: var(--light-gray);
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: auto;
+            list-style: none;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
             margin-bottom: 15px;
-            color: #2c3e50;
-            font-size: 26px;
+            background: var(--white);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
-        p {
-            font-size: 17px;
-            line-height: 1.5;
+        .benefits-list i {
+            color: var(--success-color);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        /* --- Áreas de Atendimento --- */
+        .atendimento-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .atendimento-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .atendimento-list li {
+            background: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .atendimento-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .atendimento-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .address-box {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .address-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .address-box p {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .address-box i {
+            color: var(--accent-color);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* --- Contato --- */
+        #contato {
+            background-color: var(--secondary-color);
+        }
+
+        .opening-hours-info {
+            text-align: center;
+            margin-top: -25px;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .opening-hours-info i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .contact-info-direct {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-direct h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .contact-info-direct p {
+            margin-bottom: 15px;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
             margin-bottom: 5px;
-            color: #555;
+            font-weight: 500;
         }
 
-        .loader {
-            margin: 20px auto 0;
-            border: 4px solid #e0e0e0;
-            border-top: 4px solid #2c3e50;
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        /* --- Rodapé --- */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer i {
+            margin-right: 8px;
+        }
+
+        /* --- Botão Fixo WhatsApp --- */
+        .whatsapp-fixed-button {
+            position: fixed;
+            bottom: 25px; 
+            right: 25px; 
+            background-color: var(--success-color);
+            color: white;
+            width: 65px; 
+            height: 65px; 
             border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            animation: spin 1s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem; 
+            text-decoration: none;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: transform 0.3s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-fixed-button:hover {
+            transform: scale(1.1);
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* --- Animações --- */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* --- Responsividade --- */
+        @media (max-width: 768px) {
+            .header {
+                position: relative;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+                letter-spacing: 0;
+            }
+            
+            .logo img {
+                max-height: 50px;
+            }
+
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                background-color: var(--white);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-in-out;
+            }
+            
+            .nav-menu.active {
+                max-height: 300px;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                width: 100%;
+                padding: 0;
+            }
+            
+            .nav-menu ul li {
+                margin: 0;
+                text-align: center;
+                border-bottom: 1px solid var(--light-gray);
+            }
+            
+            .nav-menu ul li:last-child {
+                border-bottom: none;
+            }
+            
+            .nav-menu ul li a {
+                display: block;
+                padding: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .atendimento-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-container {
+                margin-top: 20px;
+            }
+            
+            .contact-info-direct p {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-info-direct .btn {
+                margin-bottom: 15px !important;
+                margin-right: 0 !important;
+                width: 90%;
+            }
         }
     </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
+<body id="page-top">
 
+    <a href="https://wa.me/5511915022618?text=Vim%20pelo%20site!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="whatsapp-fixed-button" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#page-top">
+                    <img src="logo.png" alt="Logo Assistência Técnica Vitória - Conserto de Geladeiras São Paulo e Guarulhos">
+                    <span class="logo-text">Assistência Técnica Vitória</span>
+                </a>
+            </div>
+            <nav class="nav-menu" aria-label="Menu principal">
+                <ul>
+                    <li><a href="#page-top">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#atendimento">Localização</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" aria-label="Abrir menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container fade-in">
+                <h1>Conserto e Manutenção de Geladeiras, Freezers e Eletrodomésticos em São Paulo e Guarulhos</h1>
+                <p>Atendimento especializado em nossa loja física. Assistência técnica com garantia para residências e comércios.</p>
+                <a href="tel:+5511915022618" class="hero-phone">
+                    <i class="fas fa-phone-volume"></i> Toque para Ligar: (11) 91502-2618
+                </a>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511915022618?text=Vim%20pelo%20site!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-primary btn-destaque">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="#contato" class="btn btn-secondary">
+                        <i class="fas fa-calendar-alt"></i> Agendar Atendimento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="section">
+            <div class="container fade-in">
+                 <div class="about-content">
+                       <h2 class="section-title">Especialistas em Conserto de Geladeiras e Eletrodomésticos</h2>
+                       <p>A <strong>Assistência Técnica Vitória</strong> é especializada em <strong>conserto de geladeiras de todas as marcas em São Paulo e Guarulhos</strong>. Realizamos desde <strong>manutenção de geladeiras e freezers</strong> até <strong>reparo de câmaras frigoríficas comerciais</strong>.</p>
+                       <p>Com anos de experiência, nossa equipe oferece <strong>conserto de geladeira Brastemp, Consul, Electrolux, LG, Samsung</strong> e todas as principais marcas do mercado. Atendemos em nossa loja física com estrutura completa para diagnóstico e reparo.</p>
+                       <p><strong>Serviços especializados:</strong> Conserto de geladeira, manutenção de freezer, reparo de máquina de lavar, conserto de expositora, manutenção de câmara fria, reparo de cervejeira e serviços elétricos residenciais e prediais.</p>
+                       <strong><i class="fas fa-headset"></i> Ligue ou envie mensagem agora: (11) 91502-2618</strong>
+                 </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="section">
+            <div class="container fade-in">
+                <h2 class="section-title">Serviços de Manutenção e Conserto de Eletrodomésticos</h2>
+
+                <div class="services-banner">
+                    <img src="7.jpg" alt="Técnico especializado em conserto de geladeiras e freezers em São Paulo">
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>Conserto de Geladeiras e Freezers</h3>
+                        <ul>
+                            <li>Todas as marcas: Brastemp, Consul, Electrolux</li>
+                            <li>Troca de compressor e termostato</li>
+                            <li>Reparo sistema de refrigeração</li>
+                            <li>Conserto de vazamento de gás</li>
+                            <li>Manutenção preventiva</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-tshirt"></i>
+                        <h3>Conserto de Máquinas de Lavar</h3>
+                        <ul>
+                            <li>Todas as marcas do mercado</li>
+                            <li>Troca de correias e rolamentos</li>
+                            <li>Reparo elétrico e hidráulico</li>
+                            <li>Manutenção completa</li>
+                            <li>Diagnóstico preciso</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-store"></i>
+                        <h3>Refrigeração Comercial</h3>
+                        <ul>
+                            <li>Conserto de expositoras</li>
+                            <li>Manutenção de câmaras frigoríficas</li>
+                            <li>Reparo de cervejeiras</li>
+                            <li>Balcões refrigerados</li>
+                            <li>Atendimento para comércios</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Serviços Elétricos</h3>
+                        <ul>
+                            <li>Instalação elétrica residencial</li>
+                            <li>Manutenção elétrica predial</li>
+                            <li>Diagnóstico de problemas elétricos</li>
+                            <li>Reparos emergenciais</li>
+                            <li>Eletricista qualificado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="section">
+            <div class="container fade-in">
+                <h2 class="section-title">Por que Escolher a Assistência Técnica Vitória?</h2>
+                <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i> Técnicos especializados e experientes</li>
+                    <li><i class="fas fa-check-circle"></i> Atendimento em loja física estruturada</li>
+                    <li><i class="fas fa-check-circle"></i> Diagnóstico preciso e rápido</li>
+                    <li><i class="fas fa-check-circle"></i> Garantia nos serviços prestados</li>
+                    <li><i class="fas fa-check-circle"></i> Preços justos e competitivos</li>
+                    <li><i class="fas fa-check-circle"></i> Atendimento para todas as marcas</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="atendimento" class="section">
+            <div class="container fade-in">
+                <h2 class="section-title">Nossa Localização</h2>
+                <div class="atendimento-content">
+                    <div class="atendimento-text">
+                        <h3>Visite Nossa Loja Física</h3>
+                        <p>Atendemos em nossa loja com toda estrutura necessária para diagnóstico e reparo de seus equipamentos.</p>
+                        
+                        <div class="address-box">
+                            <h4><i class="fas fa-map-marker-alt"></i> Endereço Completo:</h4>
+                            <p><i class="fas fa-building"></i> <strong>Alameda Cleveland, 123</strong></p>
+                            <p><i class="fas fa-city"></i> São Paulo - SP</p>
+                            <p><i class="fas fa-mail-bulk"></i> CEP: 01218-000</p>
+                            <p><i class="fas fa-phone"></i> <strong>(11) 91502-2618</strong></p>
+                        </div>
+                        <h4 style="margin-top: 25px; color: var(--primary-color); font-size: 1.3rem;">Atendemos:</h4>
+                    <ul class="atendimento-list"> 
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>São Paulo - Capital</strong></li> 
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Guarulhos</strong></li> 
+                    </ul> 
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8486758195934!2d-46.66161892463395!3d-23.53845076154953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce584348f3ba4f%3A0xb23c0f8207b8e6b1!2sAlameda%20Cleveland%2C%20123%20-%20Campos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001218-000!5e0!3m2!1spt-BR!2sbr!4v1733959200000!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Assistência Técnica Vitória - Alameda Cleveland 123, São Paulo"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container fade-in">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="opening-hours-info">
+                <p><i class="fas fa-clock"></i> <strong>Horário de Atendimento:</strong> Segunda a sábado, das 8h às 18h.</p>
+            </div>
+            
+            <div class="contact-info-direct">
+                <h3>Prefere ligar ou enviar uma mensagem?</h3>
+                <p>
+                    <a href="tel:+5511915022618" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt"></i> Ligar Agora
+                    </a>
+                    <a href="https://wa.me/5511915022618?text=Vim%20pelo%20site!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </p>
+                <p>Ou preencha o formulário abaixo:</p>
+            </div>
+
+            <form id="whatsapp-form" class="contact-form">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Número de Telefone (WhatsApp)</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="servico">Tipo de Serviço</label>
+                    <select id="servico" name="servico" required>
+                        <option value="">Selecione o tipo de serviço</option>
+                        <option value="Conserto de Geladeira">Conserto de Geladeira</option>
+                        <option value="Conserto de Freezer">Conserto de Freezer</option>
+                        <option value="Conserto de Máquina de Lavar">Conserto de Máquina de Lavar</option>
+                        <option value="Conserto de Expositora">Conserto de Expositora</option>
+                        <option value="Manutenção de Câmara Frigorífica">Manutenção de Câmara Frigorífica</option>
+                        <option value="Conserto de Cervejeira">Conserto de Cervejeira</option>
+                        <option value="Serviço Elétrico">Serviço Elétrico</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary form-btn">
+                    <i class="fab fa-whatsapp"></i> Enviar Solicitação via WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
     <div class="container">
-        <h1>Site Temporariamente Indisponível</h1>
-        <p>No momento, esta página está passando por atualizações.</p>
-        <p>Por favor, tente novamente mais tarde.</p>
-        <div class="loader"></div>
+        <p>© 2025 Assistência Técnica Vitória | Todos os direitos reservados.</p>
+        <p><i class="fas fa-map-marker-alt"></i> Alameda Cleveland, 123 - São Paulo/SP - CEP 01218-000</p>
+        <p><i class="fas fa-phone"></i> Telefone: (11) 91502-2618</p>
+        <p><i class="fas fa-clock"></i> Horário: Segunda a sábado, 8h às 18h</p>
+        <p>Desenvolvido por: <a href="https://www.devdigitalbr.com.br" target="_blank">DEV DIGITAL BR</a></p>
     </div>
+</footer>
 
+<script>
+    // Formulário WhatsApp
+    document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const telefone = document.getElementById('telefone').value;
+        const servico = document.getElementById('servico').value;
+        const numeroWhatsApp = '5511915022618';
+
+        const mensagem = `*Nova solicitação de serviço:*\n\n*Nome:* ${nome}\n*Telefone:* ${telefone}\n*Serviço desejado:* ${servico}`;
+
+        const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+
+        window.open(linkWhatsApp, '_blank');
+    });
+
+    // Animação Fade-in
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+    
+    // Menu Mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+        }
+    });
+</script>
 </body>
 </html>
