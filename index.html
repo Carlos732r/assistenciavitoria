@@ -416,26 +416,32 @@
             gap: 40px;
             align-items: start;
         }
+        .atendimento-text {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
         
         .atendimento-list {
             list-style: none;
             padding: 0;
             margin-top: 20px;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
+            justify-items: stretch;
         }
 
         .atendimento-list li {
             background: var(--secondary-color);
-            padding: 15px;
+            padding: 10px;
             border-radius: 5px;
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             color: var(--primary-color);
             font-weight: 500;
-            font-size: 1.1rem;
         }
 
         .atendimento-text h3 {
@@ -625,6 +631,9 @@
 
         /* --- Responsividade --- */
         @media (max-width: 768px) {
+                        .atendimento-list {
+                            grid-template-columns: 1fr;
+                        }
             .header {
                 position: relative;
             }
@@ -744,7 +753,7 @@
         <section class="hero">
             <div class="container fade-in">
                 <h1>Conserto e Manutenção de Geladeiras, Freezers e Eletrodomésticos em São Paulo e Guarulhos</h1>
-                <p>Atendimento especializado em nossa loja física. Assistência técnica com garantia para residências e comércios.</p>
+                <p>Atendimento especializado em nossa loja física e também a domicílio nos bairros e cidades atendidos. Assistência técnica com garantia para residências e comércios.</p>
                 <a href="tel:+5511932092465" class="hero-phone">
                     <i class="fas fa-phone-volume"></i> Toque para Ligar: (11) 93209-2465
                 </a>
@@ -764,7 +773,7 @@
                  <div class="about-content">
                        <h2 class="section-title">Especialistas em Conserto de Geladeiras e Eletrodomésticos</h2>
                        <p>A <strong>Assistência Técnica Vitória</strong> é especializada em <strong>conserto de geladeiras de todas as marcas em São Paulo e Guarulhos</strong>. Realizamos desde <strong>manutenção de geladeiras e freezers</strong> até <strong>reparo de câmaras frigoríficas comerciais</strong>.</p>
-                       <p>Com anos de experiência, nossa equipe oferece <strong>conserto de geladeira Brastemp, Consul, Electrolux, LG, Samsung</strong> e todas as principais marcas do mercado. Atendemos em nossa loja física com estrutura completa para diagnóstico e reparo.</p>
+                       <p>Com anos de experiência, nossa equipe oferece <strong>conserto de geladeira Brastemp, Consul, Electrolux, LG, Samsung</strong> e todas as principais marcas do mercado. Atendemos em nossa loja física com estrutura completa para diagnóstico e reparo, e também realizamos atendimento a domicílio nos bairros e cidades listados.</p>
                        <p><strong>Serviços especializados:</strong> Conserto de geladeira, manutenção de freezer, reparo de máquina de lavar, conserto de expositora, manutenção de câmara fria, reparo de cervejeira e serviços elétricos residenciais e prediais.</p>
                        <strong><i class="fas fa-headset"></i> Ligue ou envie mensagem agora: (11) 93209-2465</strong>
                  </div>
@@ -842,6 +851,28 @@
             </div>
         </section>
         
+        <!-- Área de Atendimento (nova) -->
+        <section id="area-atendimento" class="section">
+            <div class="container fade-in">
+                <h2 class="section-title">Nossa Área de Atendimento</h2>
+                <div class="atendimento-text">
+                    <h3>Atendemos em Domicílio em Carapicuíba e Região</h3>
+                    <p>Nossa equipe vai até você! Oferecemos atendimento rápido nos principais bairros e cidades vizinhas.</p>
+                    <ul class="atendimento-list"> 
+                        <li><i class="fas fa-map-marker-alt"></i> Carapicuíba</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Osasco</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Barueri</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Jandira</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Cotia</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Jardim Silveira</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Ariston</li> 
+                        <li><i class="fas fa-map-marker-alt"></i> Parque Jandaia</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Santa Cecília (São Paulo)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="atendimento" class="section">
             <div class="container fade-in">
                 <h2 class="section-title">Nossa Localização</h2>
